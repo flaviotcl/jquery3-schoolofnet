@@ -7,142 +7,62 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/open-iconic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .ul{
+            padding: 0;
+            margin: 0;
+            list-style:none;
+        }
+        .li{
+            padding : 10px;
+        }
+        .li-even{
+            background : #ccc;
+        }
+        .li-odd{
+            background : #aaa;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <main>       
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12" style="background-image:url('img/48275657_803763849955486_7363358113413464064_n.png'); height: 100px;">
-                        <h3 class="text-left mt-4" style="color: white; font-style: italic;">**SISCRED-2.1**</h3>  
-                    <img src="" alt="">
-                    </div>
-                    
-                </div>
-                <div class="row">                    
-                    <div class="col-xs-12 col-sm-2" style="background: #fbfbfb;" >
-                        <ul class="nav flex-column mt-5">
-                            <li class="nav-item">
-                              <a href="#" id="linkHome" class="nav-link text-dark font-italic">
-                                <i class="fa fa-address-card text-primary fa-fw"></i>
-                                        Cliente
-                                    </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="#" id="linkAbout" class="nav-link text-dark font-italic">
-                                        <i class="fa fa-th-large  text-primary fa-fw"></i>
-                                        
-                                        Estoque
-                                    </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="#" id="linkServices" class="nav-link text-dark font-italic">
-                                        <i class="fa fa-cubes text-primary fa-fw"></i>
-                                        Gerar Venda
-                                    </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="#" class="nav-link text-dark font-italic">
-                                        <i class="fa fa-picture-o  text-primary fa-fw"></i>
-                                        Configuração
-                                    </a>
-                            </li>
-                          </ul>                     
-                    </div>                      
-                    <div class="col-xs-12 col-sm-10">
-                            <h3 class="text-center mt-5 mb-5" id="titleForm" style="border: 1px solid #dfbcbc; border-radius: 5px;">Cadastrar Cliente</h3>
-                            <form action="">
-                                <div class="row">               
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Login:</label>
-                                                <input class="form-control" type="text" placeholder="Digite seu login" >
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6">
-                                            <div class="form-group">
-                                                <label for="">Email:</label>
-                                                <input class="form-control" type="email" placeholder="Digite seu nome completo" >
-                                            </div>
-                                        </div>                 
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="form-group">
-                                            <label for="">Cpf:</label>
-                                            <input class="form-control" type="text" placeholder="Digite seu CPF:" >
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="form-group">
-                                            <label for="">Rg:</label>
-                                            <input class="form-control" type="text" placeholder="Digite seu RG:" >
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4">
-                                        <div class="form-group">
-                                            <label for="">Pis:</label>
-                                            <input class="form-control" type="text" placeholder="Digite seu PIS" >
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12">
-                                        <div class="form-group">
-                                            <label for="message">Message: </label>
-                                            <textarea class="form-control" name="message" id="" cols="30" rows="10" placeholder="Descreva o Perfil do Cliente aqui ..."></textarea>
-                                        </div>
-                                    </div>
-                                </div>    
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12 mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input">
-                                            <label for="" class="form-check-label">Aceito receber material promocional.</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-12">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-sm btn-outline-primary">SAVE</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </form>                                                   
-                    </div>
-                </div>               
-            </div>
-        </section>
-        <section>
+        <section>            
+            <!--
             <div id="jquery"></div>
             <div class="jquery-version-3"></div>
             <div class="jquery"></div>
             <div></div>
-
+            -->
             <ul>
+                <li></li> 
                 <li></li>
                 <li></li>
                 <li></li>
-                <li></li>
-                <li></li>
+                <li></li>                
             </ul>
-        </section>
-        
+        </section>        
     </main>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
     
     <script>
-        $('#titleForm').text('Alterei com Jquery !');   
-        
+               
         /*
         $('div').text('tag');
         $('#jquery').text('Id');
         $('div[class*="jquery"]').text('class');
-        
-        $('li:even').text('Impar');
-        $('li:odd').text('Par');
         */
+       /*** CSS Inline -> disposto direto no elemento.
+        $('ul').css({'padding': 0 , 'margin': 0, 'list-style':'none'});
+        $('li').text('Impar').css('padding', '10px');
+        $('li:even').text('Impar').css('background', '#ccc');
+        $('li:odd').text('Par').css({'background':'#aaa', 'color':'white'});
+        ***/
+        $('ul').addClass('ul');
+        $('li:even').text('Impar').addClass('li-even');
+        $('li:odd').text('Par').addClass('li-odd');
+        $('li').addClass('li');
 
     </script>
 
