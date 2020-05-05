@@ -23,6 +23,11 @@
             background : #aaa;
             color: white;
         }
+        .li-hover{
+            background: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +64,41 @@
         $('li:even').text('Impar').css('background', '#ccc');
         $('li:odd').text('Par').css({'background':'#aaa', 'color':'white'});
         ***/
-        $('ul').addClass('ul');
+        
+        let liHover = function(){
+            $(this).addClass('li-hover');
+        };
+        let liHoverOut = function(){
+            $(this).removeClass('li-hover');
+        };
+        /****    Utilizando a function:
+                                        $('li').hover( liHover, liHoverOut).click(function(){
+                                            alert($(this).text());
+                                        });
+                 vc só irá conseguir acessar o evento click, caso o elemento ul já tenha sido criado antes
+                 da function acima, do contrário não irá funcionar.
+
+        ****/
+        $('ul').addClass('ul').append('<li>Adicionado de forma dinâmica</li>');
+
+        $('li').hover( liHover, liHoverOut).click(function(){
+            alert($(this).text());
+        });        
+        
+        /****    Utilizando a function:
+                                        $('body').on('click','li', function(){
+                                            alert($(this).text());
+                                        }); 
+                 vc irá conseguir acessar o evento click na ul adicionada dinamicamente.
+        ***/
+        /****
+        $('body').on('click','li', function(){
+            alert($(this).text());
+        });   
+        
+        $('ul').addClass('ul').append('<li>Adicionado de forma dinâmica</li>');
+
+        ****/
         $('li:even').text('Impar').addClass('li-even');
         $('li:odd').text('Par').addClass('li-odd');
         $('li').addClass('li');
