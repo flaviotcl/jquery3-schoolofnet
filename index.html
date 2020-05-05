@@ -4,149 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/open-iconic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-        .ul{
-            padding: 0;
-            margin: 0;
-            list-style:none;
-        }
-        .li{
-            padding : 10px;
-        }
-        .li-even{
-            background : #ccc;
-        }
-        .li-odd{
-            background : #aaa;
-            color: white;
-        }
-        .li-hover{
-            background: #fff;
-            color: #000;
-            border: 1px solid #000;
-        }
-    </style>
+ 
 </head>
-<body>
-         <!--
-            <div id="jquery"></div>
-            <div class="jquery-version-3"></div>
-            <div class="jquery"></div>
-            <div></div>
-          -->
-            <ul>
-                <li></li>
-                <li></li> 
-                <li></li> 
-                <li></li> 
-                <li></li>                               
-            </ul>
-               
+<body> 
     
-    
+    <ul id="menu">
+        <li><a href="pages/home.html">Home</a></li>
+        <li><a href="pages/about.html">About us</a></li>        
+    </ul>
+    <div id="conteudo">
+
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>               
-        /***
-            $('div').text('tag');
-            $('#jquery').text('Id');
-            $('div[class*="jquery"]').text('class');
-        ***/
-        /*** CSS Inline -> Disposto direto no elemento.  ***/
-        /***
-            $('ul').css({'padding': 0 , 'margin': 0, 'list-style':'none'});
-            $('li').text('Impar').css('padding', '10px');
-            $('li:even').text('Impar').css('background', '#ccc');
-            $('li:odd').text('Par').css({'background':'#aaa', 'color':'white'});
-        ***/
-        
-        let liHover = function(){
-            $(this).addClass('li-hover');
-        };
-        let liHoverHide = function(){
-            //$(this).hide("slow");
-             // $(this).hide(1000);
-            //$(this).toggle(1000);
-            //$(this).toggle('slow');
-            /***
-            $(this).animate({
-                'padding':'15px'
-            }
-            ,'slow');
-            ***/
-            $(this).slideUp();
-        };
-        let liHoverShow = function(){
-            //$(this).show('slow');
-            //$(this).show(1000);
-            //$(this).toggle(1000);  
-            //$(this).toggle('slow');  
-            /***
-            $(this).animate({
-                'padding':'10px'
-            }
-            ,'slow');    
-            ***/ 
-            $(this).slideDown();   
-        };
-        let liHoverOut = function(){
-            $(this).removeClass('li-hover');
-        };
-        let liClick = function(){
-            alert($(this).text());
-        };
+    <script src="js/navegacao.js"></script>
 
-        /****    Utilizando a function:
-                                        $('li').hover( liHover, liHoverOut).click(function(){
-                                            alert($(this).text());
-                                        });
-                 vc só irá conseguir acessar o evento click, caso o elemento ul já tenha sido criado antes
-                 da function acima, do contrário não irá funcionar.
-
-        ****/
-        $('ul').addClass('ul').append('<li>Adicionado de forma dinâmica</li>');
-        /***                                        
-        $('li').hover( liHover, liHoverOut).click(function(){
-            alert($(this).text());
-        });   
-        ***/
-        $('li').hover(liHoverHide,liHoverShow).click(liClick);   
-
-        
-        /*** -------------------------------------------------------------- ***/
-
-
-        /****    Utilizando a function:
-                                        $('body').on('click','li', function(){
-                                            alert($(this).text());
-                                        }); 
-                 vc irá conseguir acessar o evento click na ul adicionada dinamicamente.
-        ***/
-        /***
-        $('body').on('click','li', function(){
-            alert($(this).text());
-        });   
-        
-        $('ul').addClass('ul').append('<li>Adicionado de forma dinâmica</li>');
-
-        ***/
-
-        /*** -------------------------------------------------------------- ***/
-
-        /*** Utilizando CSS Ñ disposto diretamente na tag ***/
-        $('li:even').text('Impar').addClass('li-even');
-        $('li:odd').text('Par').addClass('li-odd');
-        $('li').addClass('li');
-
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    
 </body>
 </html>
