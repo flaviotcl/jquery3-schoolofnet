@@ -53,24 +53,37 @@
     
     <script>
                
-        /*
-        $('div').text('tag');
-        $('#jquery').text('Id');
-        $('div[class*="jquery"]').text('class');
-        */
-       /*** CSS Inline -> disposto direto no elemento.
-        $('ul').css({'padding': 0 , 'margin': 0, 'list-style':'none'});
-        $('li').text('Impar').css('padding', '10px');
-        $('li:even').text('Impar').css('background', '#ccc');
-        $('li:odd').text('Par').css({'background':'#aaa', 'color':'white'});
+        /***
+            $('div').text('tag');
+            $('#jquery').text('Id');
+            $('div[class*="jquery"]').text('class');
+        ***/
+        /*** CSS Inline -> Disposto direto no elemento.  ***/
+        /***
+            $('ul').css({'padding': 0 , 'margin': 0, 'list-style':'none'});
+            $('li').text('Impar').css('padding', '10px');
+            $('li:even').text('Impar').css('background', '#ccc');
+            $('li:odd').text('Par').css({'background':'#aaa', 'color':'white'});
         ***/
         
         let liHover = function(){
             $(this).addClass('li-hover');
         };
+        let liHoverHide = function(){
+            $(this).hide('slow');
+            //$(this).toggle(1000);
+        };
+        let liHoverShow = function(){
+            $(this).show('slow');
+           // $(this).toggle(1000);            
+        };
         let liHoverOut = function(){
             $(this).removeClass('li-hover');
         };
+        let liClick = function(){
+            alert($(this).text());
+        };
+
         /****    Utilizando a function:
                                         $('li').hover( liHover, liHoverOut).click(function(){
                                             alert($(this).text());
@@ -80,25 +93,35 @@
 
         ****/
         $('ul').addClass('ul').append('<li>Adicionado de forma dinâmica</li>');
-
+        /***                                        
         $('li').hover( liHover, liHoverOut).click(function(){
             alert($(this).text());
-        });        
+        });   
+        ***/
+        $('li').hover(liHoverHide,liHoverShow).click(liClick);   
+
         
+        /*** -------------------------------------------------------------- ***/
+
+
         /****    Utilizando a function:
                                         $('body').on('click','li', function(){
                                             alert($(this).text());
                                         }); 
                  vc irá conseguir acessar o evento click na ul adicionada dinamicamente.
         ***/
-        /****
+        /***
         $('body').on('click','li', function(){
             alert($(this).text());
         });   
         
         $('ul').addClass('ul').append('<li>Adicionado de forma dinâmica</li>');
 
-        ****/
+        ***/
+
+        /*** -------------------------------------------------------------- ***/
+
+        /*** Utilizando CSS Ñ disposto diretamente na tag ***/
         $('li:even').text('Impar').addClass('li-even');
         $('li:odd').text('Par').addClass('li-odd');
         $('li').addClass('li');
